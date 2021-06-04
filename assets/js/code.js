@@ -20,7 +20,8 @@ function calc() {
     let f = [];// остаток по телу кредита
     let numberMonth =[];
 
-    SumAnnuitInMonth = Math.round((SumFromUser * ( rate*(1+rate)**term ) / ( (1+rate)**term-1 ) )*100)/100;
+    SumAnnuitInMonth = Math.round(( SumFromUser * ( rate*(1+rate)**term ) / ( (1+rate)**term-1 ) )*100)/100 ;
+    //SumAnnuitInMonth.toFixed(2);
     
     // % в мес  sumPercent = rate*SumFromUser
     
@@ -29,18 +30,24 @@ function calc() {
 
         //сумма процентов  в мес
         sumPercent = Math.round( (rate*SumFromUser)*100 )/100;
+        //sumPercent.toFixed(2);
 
         // месячная сумма тела кредита
-        sumPaymentBodyInMonth= Math.round( (SumAnnuitInMonth-sumPercent)*100)/100; 
+        sumPaymentBodyInMonth= Math.round( (SumAnnuitInMonth-sumPercent)*100 )/100; 
+        //sumPaymentBodyInMonth.toFixed(2);
+
 
         // сумма тела кредита за полный срок
         chekBody = Math.round( (chekBody + sumPaymentBodyInMonth)*100 )/100; 
+        //chekBody.toFixed(2);
 
         // остаток по телу кредита
-        SumFromUser= Math.round( (SumFromUser-sumPaymentBodyInMonth)*100 )/100; 
+        SumFromUser= Math.round( (SumFromUser-sumPaymentBodyInMonth)*100)/100; 
+        //SumFromUser.toFixed(2);
 
         //сумма переплаты
         overpayment = Math.round( (overpayment+sumPercent)*100)/100; 
+        //overpayment.toFixed(2);
 
 
        // fullAnnuit = SumAnnuitInMonth*i;
@@ -48,11 +55,23 @@ function calc() {
         if (i == term )   {
 
             if (SumFromUser>0){
-                sumPercent = Math.round( (sumPercent+SumFromUser)*100 )/100;
+                sumPercent = Math.round( (sumPercent+SumFromUser)*100)/100;
+               // sumPercent.toFixed(2);
                 chekBody = chekBody+ SumFromUser;
+                //chekBody.toFixed(2);
                 SumFromUser = SumFromUser-SumFromUser;
+                //SumFromUser.toFixed(2);
                 
         
+            } else {
+
+                sumPercent = Math.round( (sumPercent+SumFromUser)*100)/100;
+               // sumPercent.toFixed(2);
+                chekBody = chekBody+ SumFromUser;
+                //chekBody.toFixed(2);
+                SumFromUser = SumFromUser-SumFromUser;
+                //SumFromUser.toFixed(2);
+
             }
         }   
 
