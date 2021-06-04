@@ -55,7 +55,7 @@ function calc() {
         if (i == term )   {
 
             if (SumFromUser>0){
-                sumPercent = Math.round( (sumPercent+SumFromUser)*100)/100;
+                SumAnnuitInMonth = Math.round( (SumAnnuitInMonth+SumFromUser)*100)/100;
                // sumPercent.toFixed(2);
                 chekBody = chekBody+ SumFromUser;
                 //chekBody.toFixed(2);
@@ -65,7 +65,7 @@ function calc() {
         
             } else {
 
-                sumPercent = Math.round( (sumPercent+SumFromUser)*100)/100;
+                SumAnnuitInMonth = Math.round( (SumAnnuitInMonth+SumFromUser)*100)/100;
                // sumPercent.toFixed(2);
                 chekBody = chekBody+ SumFromUser;
                 //chekBody.toFixed(2);
