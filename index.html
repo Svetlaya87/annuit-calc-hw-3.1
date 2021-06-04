@@ -106,33 +106,89 @@
         
             --> 
 
-            <div class="d-flex flex-row">
-                <div class="p-2 d-flex flex-column align-items-stretch justify-content-start">
-                        <div class="pe-3">
-                            <p class="my-5 text-black fw-bold">Сумма аннуитета: </p>
-                        </div>
+            <div class="d-flex flex-column">
+                <div class="p-2 d-flex flex-row align-items-stretch justify-content-start">
+                    <div class="pe-2">
+                        <p class="my-3 text-black fw-bold">№: </p>
+                    </div>
+
+                    <div class="pe-2">
+                        <p class="my-3 text-black fw-bold">Сумма аннуитета: </p>
+                    </div>
+
+                    <div class="pe-2">
+                        <p class="my-3 text-black fw-bold"> Тело кредита </p>
+                    </div>
+
+                    <div class="pe-2">
+                        <p class="my-3 text-black fw-bold">Сумма процентов </p>
+                    </div>
+
+                    <div class="pe-2">
+                        <p class="my-3 text-black fw-bold">Остаток по телу кредита </p>
+                    </div>
+
+                                 
+                    
+
+
+                               
+                    
+                </div>
+
+                <div class="p-1 d-flex flex-row">
+
+                    <div class="p-2 d-flex align-items-end ">
+                        <output id="numberPeriodResult" class="my-5 text-black-50 d-flex justify-content-end"></output>
 
                                    
+                    
+                    </div>
+
+
+                    <div class="p-2 d-flex flex-column  justify-content-end">
+                    
+                                   
                         <output id="annuitSumResult" class="my-5 text-black-50"></output>
+                    </div>
+
+                    <div class="p-2 d-flex flex-column justify-content-end">
+                    
+
+                        <output id="paymentBodySumInMonthResult" class="my-5 text-black-50"></output>          
+                    
+                    </div>
+
+
+                    <div class="p-2 d-flex flex-column justify-content-end">
+                    
+
+                               
+                        <output id="sumPersentResult" class="my-5 text-black-50"></output>
+                    </div>
+
+                    <div class="p-2 d-flex flex-column justify-content-end">
+                    
+
+                               
+                        <output id="saldoBodySumResult" class="my-5 text-black-50 d-flex flex-nowrap align-content-end"></output>
+                    </div>
+
                 </div>
 
-                <div class="p-2 d-flex flex-column align-items-stretch justify-content-start">
-                    <div class="pe-3">
-                        <p class="my-5 text-black fw-bold">Сумма процентов </p>
+            </div>
+
+            <div class="d-flex flex-row">
+               <div class="p-2 d-flex flex-row justify-content-end">
+                    <div class="pe-3 align-self-center">
+                        <p class="my-5 text-black fw-bold">Сумма переплаты </p>
                     </div>
 
                                
-                    <output id="sumPersentResult" class="my-5 text-black-50"></output>
+                    <output id="overpaySumResult" class="my-5 text-black-50 align-self-center"></output>
                 </div>
 
-                <div class="p-2 d-flex flex-column align-items-stretch justify-content-start">
-                    <div class="pe-3">
-                        <p class="my-5 text-black fw-bold">Остаток по телу кредита: </p>
-                    </div>
-
-                               
-                    <output id="saldoBodySumResult" class="my-5 text-black-50"></output>
-                </div>
+               
             </div>
 
         </div>    

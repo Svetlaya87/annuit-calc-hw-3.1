@@ -11,10 +11,14 @@ function calc() {
     let sumPercent =0;
     let sumPaymentBodyInMonth= 0;
     let overpayment=0;
-    let lastBodyPayment=0;
+    
     let chekBody=0;
-    let fullAnnuit =0;
-    let lastPersent =0;
+   
+    let a=[]; //сумма аннуитета
+    let b =[];// тело кредита
+    let d =[];//% в месяц
+    let f = [];// остаток по телу кредита
+    let numberMonth =[];
 
     SumAnnuitInMonth = Math.round((SumFromUser * ( rate*(1+rate)**term ) / ( (1+rate)**term-1 ) )*100)/100;
     
@@ -52,21 +56,31 @@ function calc() {
             }
         }   
 
-        
-        annuitSumResult.innerHTML=`${SumAnnuitInMonth}`;
-        sumPersentResult.innerHTML=`${sumPercent}`;
-        saldoBodySumResult.innerHTML=`${SumFromUser}`;
+        a.push(SumAnnuitInMonth);
+        b.push(sumPaymentBodyInMonth);
+        d.push(sumPercent);
+        f.push(SumFromUser);
+        numberMonth.push(i);
+
+        numberPeriodResult.innerHTML=`${numberMonth.join(' ')}`;
+        annuitSumResult.innerHTML=`${a.join(' ')}`;
+        paymentBodySumInMonthResult.innerHTML=`${b.join(' ')}`;
+
+        sumPersentResult.innerHTML=`${d.join(' ')}`;
+        saldoBodySumResult.innerHTML=`${f.join(' ')}`;
+        overpaySumResult.innerHTML=`${overpayment}`;
 
 
         
        
         console.log(`Месяц ${i}`);
+        console.log(`Сумма аннуитета: ${a}`);
 
-        console.log(`Сумма аннуитета: ${SumAnnuitInMonth}`);
+        console.log(`Сумма выплат по телу: ${b}`);
+        
+        console.log(`Сумма процентов ${d}`);
 
-        console.log(`Сумма процентов ${sumPercent}`);
-
-        console.log(`Остаток по телу кредита ${SumFromUser}`);
+        console.log(`Остаток по телу кредита ${f}`);
 
         console.log(`Переплата ${overpayment}`);
         console.log(`Тело кредита ${chekBody}`);

@@ -27,4 +27,24 @@ input:invalid {
 
   input:valid {
     border-color: rgba(2, 197, 44, 0.76);
-  }  
+}  
+
+#numberPeriodResult {
+    max-width: 40px;
+
+}
+
+#annuitSumResult, #paymentBodySumInMonthResult{
+    max-width: 150px;
+
+}
+
+#sumPersentResult {
+    max-width: 120px;
+
+}
+
+#saldoBodySumResult {
+    max-width: 100px;
+
+}
