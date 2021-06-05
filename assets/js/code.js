@@ -81,6 +81,16 @@ function calc() {
         f.push(SumFromUser);
         numberMonth.push(i);
 
+       
+
+        
+
+            
+            
+           
+
+       
+
         numberPeriodResult.innerHTML=`${numberMonth.join(' ')}`;
         annuitSumResult.innerHTML=`${a.join(' ')}`;
         paymentBodySumInMonthResult.innerHTML=`${b.join(' ')}`;
