@@ -29,6 +29,7 @@ input:invalid {
     border-color: rgba(2, 197, 44, 0.76);
 }  
 
+/*
 #numberPeriodResult {
     max-width: 40px;
 
@@ -47,4 +48,76 @@ input:invalid {
 #saldoBodySumResult {
     max-width: 100px;
 
+}*/
+
+.grid-results {
+    display: grid;
+    grid-template-rows: 10% 1fr 10%;
+    grid-template-columns: 40px repeat(4,1fr);
+    grid-gap: 10px;
+    row-gap: 15px;
+    grid-template-areas: 
+
+    'number-res         sum-annuitet-res body-credit-res             sum-percent-res saldo-body-res'
+
+    'numberPeriodResult annuitSumResult  paymentBodySumInMonthResult sumPersentResult saldoBodySumResult'
+
+    '. sum-overpay-res sum-overpay-res overpaySumResult .';
+
+    justify-content: flex-end;
 }
+    /*название табицы*/
+    .number-res {
+        grid-area: number-res;
+    }
+
+    .sum-annuitet-res {
+        grid-area: sum-annuitet-res;
+    }
+
+    .body-credit-res{
+        grid-area: body-credit-res;
+    }
+
+    .sum-percent-res{
+        grid-area: sum-percent-res;
+    }
+
+    .saldo-body-res {
+        grid-area:  saldo-body-res;
+    }
+
+
+    /*значения таблицы*/
+    .numberPeriodResult{
+        grid-area: numberPeriodResult;
+    }
+
+
+    .annuitSumResult{
+        grid-area: annuitSumResult;
+        
+    }
+
+    .paymentBodySumInMonthResult{
+        grid-area: paymentBodySumInMonthResult;
+    }
+
+    .sumPersentResult{
+        grid-area: sumPersentResult;
+    }
+
+    .saldoBodySumResult {
+        grid-area: saldoBodySumResult;
+    }
+    
+    /*результаты*/
+    .sum-overpay-res {
+        grid-area: sum-overpay-res;
+        
+    }
+
+    .overpaySumResult{
+        grid-area: overpaySumResult;
+        
+    }

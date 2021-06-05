@@ -106,91 +106,87 @@
         
             --> 
 
-            <div class="d-flex flex-column">
-                <div class="p-2 d-flex flex-row align-items-stretch justify-content-start">
-                    <div class="pe-2">
-                        <p class="my-3 text-black fw-bold">№: </p>
+            <div class="grid-results p-3">
+                
+                    <div class="number-res ps-2">
+                        <p class="my-3 text-black fw-bold text-center">№: </p>
                     </div>
 
-                    <div class="pe-2">
-                        <p class="my-3 text-black fw-bold">Сумма аннуитета: </p>
+                    <div class="sum-annuitet-res pe-2">
+                        <p class="my-3 text-black fw-bold text-center">Сумма аннуитета: </p>
                     </div>
 
-                    <div class="pe-2">
-                        <p class="my-3 text-black fw-bold"> Тело кредита </p>
+                    <div class="body-credit-res pe-2">
+                        <p class="my-3 text-black fw-bold text-center"> Тело кредита </p>
                     </div>
 
-                    <div class="pe-2">
-                        <p class="my-3 text-black fw-bold">Сумма процентов </p>
+                    <div class="sum-percent-res pe-2">
+                        <p class="my-3 text-black fw-bold text-center">Сумма процентов </p>
                     </div>
 
-                    <div class="pe-2">
+                    <div class="saldo-body-res pe-2 text-center">
                         <p class="my-3 text-black fw-bold">Остаток по телу кредита </p>
                     </div>
 
                                  
+                                         
                     
+                
 
+                
 
-                               
-                    
-                </div>
-
-                <div class="p-1 d-flex flex-row">
-
-                    <div class="p-2 d-flex align-items-end ">
-                        <output id="numberPeriodResult" class="my-5 text-black-50 d-flex justify-content-end"></output>
+                    <div class="numberPeriodResult ps-3">
+                        <output id="numberPeriodResult" class="text-black-50 text-center"></output>
 
                                    
                     
                     </div>
 
 
-                    <div class="p-2 d-flex flex-column  justify-content-end">
+                    <div class="annuitSumResult p-2">
                     
                                    
-                        <output id="annuitSumResult" class="my-5 text-black-50"></output>
+                        <output id="annuitSumResult" class="text-black-50 text-end"></output>
                     </div>
 
-                    <div class="p-2 d-flex flex-column justify-content-end">
+                    <div class="paymentBodySumInMonthResult p-2">
                     
 
-                        <output id="paymentBodySumInMonthResult" class="my-5 text-black-50"></output>          
+                        <output id="paymentBodySumInMonthResult" class="5 text-black-50 text-end"></output>          
                     
                     </div>
 
 
-                    <div class="p-2 d-flex flex-column justify-content-end">
-                    
-
-                               
-                        <output id="sumPersentResult" class="my-5 text-black-50"></output>
-                    </div>
-
-                    <div class="p-2 d-flex flex-column justify-content-end">
+                    <div class="sumPersentResult p-2">
                     
 
                                
-                        <output id="saldoBodySumResult" class="my-5 text-black-50 d-flex flex-nowrap align-content-end"></output>
+                        <output id="sumPersentResult" class="text-black-50 text-end"></output>
                     </div>
 
-                </div>
+                    <div class="saldoBodySumResult p-2 pe-3">
+                    
+
+                               
+                        <output id="saldoBodySumResult" class="text-black-50 text-end"></output>
+                    </div>
+
+                    <div class="sum-overpay-res p-2 ps-3 align-center">
+                        <div class="text-black fw-bold text-start align-bottom">
+                            Сумма переплаты 
+
+                        </div>
+                    </div>
+
+                   <div class="overpaySumResult p-2 text-end align-center"> 
+                        <output id="overpaySumResult" class="text-black-50 text-end align-bottom"></output>
+                    </div>
+
+                
 
             </div>
 
-            <div class="d-flex flex-row">
-               <div class="p-2 d-flex flex-row justify-content-end">
-                    <div class="pe-3 align-self-center">
-                        <p class="my-5 text-black fw-bold">Сумма переплаты </p>
-                    </div>
-
-                               
-                    <output id="overpaySumResult" class="my-5 text-black-50 align-self-center"></output>
-                </div>
-
-               
-            </div>
-
+            
         </div>    
 							
 
