@@ -55,7 +55,7 @@ input:invalid {
 
     display: grid;
     grid-template-rows: 15% 1fr 10%;
-    grid-template-columns: 40px repeat(4,1fr);
+    grid-template-columns: 60px repeat(4,1fr);
     grid-gap: 10px;
     row-gap: 15px;
     grid-template-areas: 
