@@ -51,8 +51,10 @@ input:invalid {
 }*/
 
 .grid-results {
+    max-width: 690px;
+
     display: grid;
-    grid-template-rows: 10% 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
     grid-template-columns: 40px repeat(4,1fr);
     grid-gap: 10px;
     row-gap: 15px;
