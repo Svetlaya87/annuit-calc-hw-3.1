@@ -91,12 +91,12 @@ function calc() {
 
        
 
-        numberPeriodResult.innerHTML=`${numberMonth.join(' ')}`;
-        annuitSumResult.innerHTML=`${a.join(' ')}`;
-        paymentBodySumInMonthResult.innerHTML=`${b.join(' ')}`;
+        numberPeriodResult.innerHTML=`${numberMonth.join('<br/>')}`;
+        annuitSumResult.innerHTML=`${a.join('<br/>')}`;
+        paymentBodySumInMonthResult.innerHTML=`${b.join('<br/>')}`;
 
-        sumPersentResult.innerHTML=`${d.join(' ')}`;
-        saldoBodySumResult.innerHTML=`${f.join(' ')}`;
+        sumPersentResult.innerHTML=`${d.join('<br/>')}`;
+        saldoBodySumResult.innerHTML=`${f.join('<br/>')}`;
         overpaySumResult.innerHTML=`${overpayment}`;
 
 
