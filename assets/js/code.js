@@ -19,9 +19,10 @@ function calc() {
     let d =[];//% в месяц
     let f = [];// остаток по телу кредита
     let numberMonth =[];
+    let arr= [];
 
     SumAnnuitInMonth = Math.round(( SumFromUser * ( rate*(1+rate)**term ) / ( (1+rate)**term-1 ) )*100)/100 ;
-    //SumAnnuitInMonth.toFixed(2);
+    
     
     // % в мес  sumPercent = rate*SumFromUser
     
@@ -30,47 +31,47 @@ function calc() {
 
         //сумма процентов  в мес
         sumPercent = Math.round( (rate*SumFromUser)*100 )/100;
-        //sumPercent.toFixed(2);
+        
 
         // месячная сумма тела кредита
         sumPaymentBodyInMonth= Math.round( (SumAnnuitInMonth-sumPercent)*100 )/100; 
-        //sumPaymentBodyInMonth.toFixed(2);
+        
 
 
         // сумма тела кредита за полный срок
         chekBody = Math.round( (chekBody + sumPaymentBodyInMonth)*100 )/100; 
-        //chekBody.toFixed(2);
+        
 
         // остаток по телу кредита
         SumFromUser= Math.round( (SumFromUser-sumPaymentBodyInMonth)*100)/100; 
-        //SumFromUser.toFixed(2);
+        
 
         //сумма переплаты
         overpayment = Math.round( (overpayment+sumPercent)*100)/100; 
-        //overpayment.toFixed(2);
-
-
-       // fullAnnuit = SumAnnuitInMonth*i;
+        
 
         if (i == term )   {
 
             if (SumFromUser>0){
                 SumAnnuitInMonth = Math.round( (SumAnnuitInMonth+SumFromUser)*100)/100;
-               // sumPercent.toFixed(2);
+                
+                
                 chekBody = chekBody+ SumFromUser;
-                //chekBody.toFixed(2);
+                
+                
                 SumFromUser = SumFromUser-SumFromUser;
-                //SumFromUser.toFixed(2);
+                
                 
         
             } else {
 
                 SumAnnuitInMonth = Math.round( (SumAnnuitInMonth+SumFromUser)*100)/100;
-               // sumPercent.toFixed(2);
+                
+                
                 chekBody = chekBody+ SumFromUser;
-                //chekBody.toFixed(2);
+                
                 SumFromUser = SumFromUser-SumFromUser;
-                //SumFromUser.toFixed(2);
+                
 
             }
         }   
@@ -81,26 +82,7 @@ function calc() {
         f.push(SumFromUser);
         numberMonth.push(i);
 
-       
-
-        
-
-            
-            
-           
-
-       
-
-        numberPeriodResult.innerHTML=`${numberMonth.join('<br/>')}`;
-        annuitSumResult.innerHTML=`${a.join('<br/>')}`;
-        paymentBodySumInMonthResult.innerHTML=`${b.join('<br/>')}`;
-
-        sumPersentResult.innerHTML=`${d.join('<br/>')}`;
-        saldoBodySumResult.innerHTML=`${f.join('<br/>')}`;
-        overpaySumResult.innerHTML=`${overpayment}`;
-
-
-        
+               
        
         console.log(`Месяц ${i}`);
         console.log(`Сумма аннуитета: ${a}`);
@@ -115,24 +97,31 @@ function calc() {
         console.log(`Тело кредита ${chekBody}`);
         //console.log(`Тело кредита+ переплата по % ${fullAnnuit}`);
 
-
-
-
-
-
-
-
+        
     }
 
-   
+
+    arr = [a, b, d, f];
 
 
+    for (let i =0; i < arr.length; i++){
 
+        for (let j=0; j<arr[i].length; j++) {
+            arr[i][j]=arr[i][j].toFixed(2);
+        }
+
+    }
+       
     
-        
-   
-
+        numberPeriodResult.innerHTML=`${numberMonth.join('<br/>')}`;
+        annuitSumResult.innerHTML=`${a.join('<br/>')}`;
+        paymentBodySumInMonthResult.innerHTML=`${b.join('<br/>')}`;
     
+        sumPersentResult.innerHTML=`${d.join('<br/>')}`;
+        saldoBodySumResult.innerHTML=`${f.join('<br/>')}`;
+        overpaySumResult.innerHTML=`${overpayment}`;
+
+ 
     
 
         
